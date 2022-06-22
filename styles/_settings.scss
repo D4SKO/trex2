@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+$font1:'Bebas Neue', cursive;
+
+
+*,::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: auto;
+}
+h1{
+    font-size: clamp(20px, 5vw, 95px);
+    font-family: $font1;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
