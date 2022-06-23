@@ -1,33 +1,145 @@
 .home{
     width: 100%;
     height: auto;
-    /* Slideshow container */
-.slideshow-container {
-    width: 100%;
-    position: relative;
-    margin: auto;
-    .slide{
+    .first{
+      width: 100%;
+      height: 80vh;
+      position: relative;
+      img{
         width: 100%;
-        height: 75vh;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+        filter: brightness(0.8)
+      }
+      .center{
+        @include centera;
+        top: 60%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        h1{
+          color: white;
         }
-        .fade {
-            animation: fade 1.5s;
-          }
-          @keyframes fade {
-            from {opacity: .4} 
-            to {opacity: 1}
-          }
+        p{
+          color: white;
+          width: 90%;
+          margin-top: 1vh;
+        }
+      }
     }
-  }
-  
-
-  
-
-  
-  /* Fading animation */
-
+    .deux{
+      width: 100%;
+      height: 70vh;
+      @include centerf;
+      margin-top: 5vh;
+      .center{
+        width: 85%;
+        height: 90%;
+        display: flex;
+        .leftside{
+          width: 50%;
+          height: 100%;
+          @include centerf;
+          justify-content: flex-start;
+          .center2{
+            width: 70%;
+            height: auto;
+            p{
+              margin: 2vh 0;
+            }
+          }
+        }
+        .rightside{
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+          height: 100%;
+          justify-content: space-between;
+          .top{
+            width: 100%;
+            height: 48%;
+            display: flex;
+            justify-content: space-between;
+            .img{
+              width: 48%;
+              height: 100%;
+              overflow: hidden;
+              img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+          .bottom{
+            width: 100%;
+            height: 48%;
+            .img{
+              overflow: hidden;
+              width: 100%;
+              height: 100%;
+              img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
+    }
+    .trois{
+      height: 80vh;
+      width: 100%;
+      @include centerf;
+      margin-top: 5vh;
+      .center{
+        width: 85%;
+        height: 100%;
+        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p:first-child{
+          text-align: center;
+          position: relative;
+          &:after{
+            position: absolute;
+            bottom: -10px;
+            width: 5%;
+            height: 3px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: black;
+            content: "";
+          }
+        }
+        .actis{
+          width: 100%;
+          height: 85%;
+          background-color: black;
+          margin-top: 2vh;
+          display: flex;
+          justify-content: space-between;
+          .acti{
+            width: 32%;
+            height: 100%;
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+              height: 50%;
+              width: 100%;
+              object-fit: cover;
+            }
+            .petititre{
+              margin-top: 3vh;
+            }
+          }
+        }
+      }
+    }
 }

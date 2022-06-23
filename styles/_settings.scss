@@ -1,18 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-$font1:'Bebas Neue', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
 
+$font1:'Noto Sans', sans-serif;
+$font2:'Archivo', sans-serif;
+
+$blue:#0E34A0;
+$mauve:#2F3061;
+$jaune:#A49300;
+$mauvet:#2f3061f3;
+
+@mixin  centerf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin  centera {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+p{
+    font-family: $font2;
+    font-size: clamp(14px, 1.1vw, 20px);
+    line-height: 25px;
+}
+.petititre{
+    font-size: clamp(16px, 1.4vw, 20px);
+    font-weight: bold;
+}
+li{
+    list-style-type: none;
+    color: white;
+    font-family: $font1;
+}
 
 *,::after, ::before{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+    color: black;
+    font-family: $font2;
+}
 body{
     width: 100vw;
     height: auto;
 }
 h1{
-    font-size: clamp(20px, 5vw, 95px);
+    font-size: clamp(20px, 4vw, 75px);
     font-family: $font1;
     letter-spacing: 2px;
     font-weight: 700;

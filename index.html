@@ -4,29 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="styles/index.css">
-    <title>T REX EXPO</title>
+    <title>T-REX EXPO</title>
 </head>
 <body>
-    <div class="home">
-        <div class="slideshow-container">
-
-            <div class="slide fade">
-              <img src="../img/trex.jpg">
-            </div>
-            
-            <div class="slide fade">
-              <img src="../img/trex.webp">
-            </div>
-            
-            <div class="slide fade">
-              <img src="../img/trex2.webp">
-            </div>
-            
-            </div>
-            <br>
+  <div class="home">
+    <header>
+      <div class="logo"></div>
+      <nav>
+        <ul>
+          <li><a href="">HOME</a></li>
+          <li><a href="">TICKETS</a></li>
+          <li><a href="">STORE</a></li>
+          <li><a href="">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="first">
+      <img src="./img/trex.jpg" alt="trex">
+      <div class="center">
+        <h1>T-REX EXPO BRUXELLES</h1>
+        <p class="petititre">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos nemo in praesentium nam aperiam iusto non voluptatibus similique magni.</p>
+      </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="js.js"></script>
+    <div class="deux">
+      <div class="center">
+        <div class="leftside">
+          <div class="center2">
+            <p class="petititre">Expo T-rex</p>
+            <p>Au-delà des images, des films et des mythes, cette expo vous invite à une vraie rencontre avec cet animal fascinant, probablement le plus célèbre des dinosaures.
+              Dès l’entrée, vivez un face à face spectaculaire avec une femelle T. rex de 67 millions d’années. Elle s’appelle Trix et vous accueille en position d’attaque.</p>
+          </div>
+        </div>
+        <div class="rightside">
+          <div class="top">
+            <div class="img"><img src="./img/DSC_0811.jpg" alt="t-rex"></div>
+            <div class="img"><img src="./img/trex2.webp" alt="t-rex"></div>
+          </div>
+          <div class="bottom">
+            <div class="img"><img src="./img/trex.webp" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="trois">
+      <div class="center">
+        <p class="petititre">Actvités exposition</p>
+        <div class="actis">
+          <div class="acti">
+            <img src="./img/G7DUKKBQAJBQPOT4FDKBHMGOZM.jpg" alt="trex">
+            <p class="petititre">Lorem ipsum</p>
+          </div>
+          <div class="acti"></div>
+          <div class="acti"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>    <script src="parallax.js"></script>
+    <script>
+      var scene = document.getElementById('scene');
+      var parallax = new Parallax(scene);
+    </script>
 </body>
 </html>

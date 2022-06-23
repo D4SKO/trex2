@@ -1,9 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+p {
+  font-family: "Archivo", sans-serif;
+  font-size: clamp(14px, 1.1vw, 20px);
+  line-height: 25px;
+}
+
+.petititre {
+  font-size: clamp(16px, 1.4vw, 20px);
+  font-weight: bold;
+}
+
+li {
+  list-style-type: none;
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+}
+
 *, ::after, ::before {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: "Archivo", sans-serif;
 }
 
 body {
@@ -12,8 +35,8 @@ body {
 }
 
 h1 {
-  font-size: clamp(20px, 5vw, 95px);
-  font-family: "Bebas Neue", cursive;
+  font-size: clamp(20px, 4vw, 75px);
+  font-family: "Noto Sans", sans-serif;
   letter-spacing: 2px;
   font-weight: 700;
 }
@@ -21,48 +44,327 @@ h1 {
 .home {
   width: 100%;
   height: auto;
-  /* Slideshow container */
-  /* Fading animation */
 }
 
-.home .slideshow-container {
+.home .first {
   width: 100%;
+  height: 80vh;
   position: relative;
-  margin: auto;
 }
 
-.home .slideshow-container .slide {
+.home .first img {
   width: 100%;
-  height: 75vh;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
 }
 
-.home .slideshow-container .slide img {
+.home .first .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home .first .center h1 {
+  color: white;
+}
+
+.home .first .center p {
+  color: white;
+  width: 90%;
+  margin-top: 1vh;
+}
+
+.home .deux {
+  width: 100%;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5vh;
+}
+
+.home .deux .center {
+  width: 85%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home .deux .center .leftside {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.home .deux .center .leftside .center2 {
+  width: 70%;
+  height: auto;
+}
+
+.home .deux .center .leftside .center2 p {
+  margin: 2vh 0;
+}
+
+.home .deux .center .rightside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home .deux .center .rightside .top {
+  width: 100%;
+  height: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home .deux .center .rightside .top .img {
+  width: 48%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.home .deux .center .rightside .top .img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.home .slideshow-container .slide .fade {
-  -webkit-animation: fade 1.5s;
-          animation: fade 1.5s;
+.home .deux .center .rightside .bottom {
+  width: 100%;
+  height: 48%;
 }
 
-@-webkit-keyframes fade {
-  from {
-    opacity: .4;
-  }
-  to {
-    opacity: 1;
-  }
+.home .deux .center .rightside .bottom .img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
-@keyframes fade {
-  from {
-    opacity: .4;
-  }
-  to {
-    opacity: 1;
-  }
+.home .deux .center .rightside .bottom .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.home .trois {
+  height: 80vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5vh;
+}
+
+.home .trois .center {
+  width: 85%;
+  height: 100%;
+  background-color: aqua;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home .trois .center p:first-child {
+  text-align: center;
+  position: relative;
+}
+
+.home .trois .center p:first-child:after {
+  position: absolute;
+  bottom: -10px;
+  width: 5%;
+  height: 3px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: black;
+  content: "";
+}
+
+.home .trois .center .actis {
+  width: 100%;
+  height: 85%;
+  background-color: black;
+  margin-top: 2vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home .trois .center .actis .acti {
+  width: 32%;
+  height: 100%;
+  background-color: aliceblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .trois .center .actis .acti img {
+  height: 50%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.home .trois .center .actis .acti .petititre {
+  margin-top: 3vh;
+}
+
+header {
+  width: 90%;
+  height: 20vh;
+  position: fixed;
+  z-index: 50000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+header .logo {
+  width: 15%;
+  height: 60%;
+}
+
+header nav {
+  width: 25%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+header nav ul li {
+  position: relative;
+}
+
+header nav ul li a {
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  font-size: clamp(15px, 1.3vw, 20px);
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+header nav ul li:hover a {
+  color: #A49300;
+}
+
+header nav ul li:hover:after {
+  -webkit-transform: translateX(-50%) scaleX(1);
+          transform: translateX(-50%) scaleX(1);
+}
+
+header nav ul li:after {
+  content: "";
+  width: 120%;
+  height: 2px;
+  position: absolute;
+  background-color: #A49300;
+  left: 50%;
+  -webkit-transform: translate(-50%) scaleX(0);
+          transform: translate(-50%) scaleX(0);
+  bottom: -5px;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
 }
 /*# sourceMappingURL=index.css.map */
