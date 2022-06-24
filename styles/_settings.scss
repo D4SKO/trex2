@@ -6,7 +6,7 @@ $font2:'Archivo', sans-serif;
 $blue:#0E34A0;
 $mauve:#2F3061;
 $jaune:#A49300;
-$mauvet:#2f3061f3;
+$mauvet:#2f306160;
 
 @mixin  centerf {
     display: flex;
@@ -23,10 +23,17 @@ p{
     font-family: $font2;
     font-size: clamp(14px, 1.1vw, 20px);
     line-height: 25px;
+    color: #3D3D3D;
 }
 .petititre{
     font-size: clamp(16px, 1.4vw, 20px);
     font-weight: bold;
+    color: #3D3D3D;
+}
+.petititre2{
+    font-size: clamp(16px, 2vw, 35px);
+    font-weight: bold;
+    color: $blue;
 }
 li{
     list-style-type: none;
@@ -47,6 +54,7 @@ a{
 body{
     width: 100vw;
     height: auto;
+    position: relative;
 }
 h1{
     font-size: clamp(20px, 4vw, 75px);

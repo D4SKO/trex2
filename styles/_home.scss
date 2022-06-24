@@ -5,6 +5,14 @@
       width: 100%;
       height: 80vh;
       position: relative;
+      .hoveranim1{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        transform-origin: 0% 100%;
+        opacity: 0.9;
+      }
       img{
         width: 100%;
         height: 100%;
@@ -15,128 +23,82 @@
       }
       .center{
         @include centera;
-        top: 60%;
+        top: 70%;
         display: flex;
         align-items: center;
         flex-direction: column;
+        width: 100%;
         h1{
           color: white;
+          margin-bottom: 5vh;
+        }
+        .p{
+          width: 100%;
+          height: auto;
         }
         p{
           color: white;
-          width: 90%;
-          margin-top: 1vh;
+          width: 100%;
+          text-align: center;
+          margin: 0 auto;
+          margin-top: 15vh;
+        }
+        button{
+          background-color: $mauve;
+          border: none;
+          padding: 15px 30px;
+          margin-top: 10vh;
+          cursor: pointer;
+          z-index: 500000;
+          a{
+            color: white;
+          }
+          &:hover{
+            background-color: transparent;
+            border: 1px solid $mauve;
+          }
         }
       }
     }
-    .deux{
+    .scene.arrive .hoveranim1{
+      transform:translateX(-100%);
+      transition: 1s 0.5s ease-out;
+    }
+    .second{
+      height: 20vh;
       width: 100%;
-      height: 70vh;
       @include centerf;
-      margin-top: 5vh;
       .center{
         width: 85%;
         height: 90%;
         display: flex;
-        .leftside{
-          width: 50%;
-          height: 100%;
-          @include centerf;
-          justify-content: flex-start;
-          .center2{
-            width: 70%;
-            height: auto;
-            p{
-              margin: 2vh 0;
-            }
-          }
-        }
-        .rightside{
-          display: flex;
-          flex-direction: column;
-          width: 50%;
-          height: 100%;
-          justify-content: space-between;
-          .top{
-            width: 100%;
-            height: 48%;
-            display: flex;
-            justify-content: space-between;
-            .img{
-              width: 48%;
-              height: 100%;
-              overflow: hidden;
-              img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-              }
-            }
-          }
-          .bottom{
-            width: 100%;
-            height: 48%;
-            .img{
-              overflow: hidden;
-              width: 100%;
-              height: 100%;
-              img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-              }
-            }
-          }
-        }
-      }
-    }
-    .trois{
-      height: 80vh;
-      width: 100%;
-      @include centerf;
-      margin-top: 5vh;
-      .center{
-        width: 85%;
-        height: 100%;
-        background-color: aqua;
-        display: flex;
-        flex-direction: column;
         justify-content: space-between;
-        p:first-child{
-          text-align: center;
-          position: relative;
-          &:after{
-            position: absolute;
-            bottom: -10px;
-            width: 5%;
-            height: 3px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: black;
-            content: "";
+        .logo{
+          width: 30%;
+          height: 100%;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
           }
         }
-        .actis{
-          width: 100%;
-          height: 85%;
-          background-color: black;
-          margin-top: 2vh;
+        .righ{
+          width: 60%;
+          height: 100%;
           display: flex;
-          justify-content: space-between;
-          .acti{
-            width: 32%;
-            height: 100%;
-            background-color: aliceblue;
+          .info1{
             display: flex;
             flex-direction: column;
+            width: 50%;
+            justify-content: center;
+            border-right: 1px solid black;
+          }
+          .info2{
+            width: 50%;
+            display: flex;
             align-items: center;
-            img{
-              height: 50%;
-              width: 100%;
-              object-fit: cover;
-            }
-            .petititre{
-              margin-top: 3vh;
+            p{
+              margin-left: 15px;
             }
           }
         }

@@ -1,0 +1,116 @@
+.contact{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.7);
+    }
+    .center{
+        width: 65%;
+        height: 75%;
+        @include centera;
+        margin-top: 5vh;
+        display: flex;
+        &:after{
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            position: absolute;
+            content: "";
+            opacity: 0.9;
+            z-index: -1;
+        }
+        .leftside{
+            width: 50%;
+            height: 100%;
+            @include centerf;
+            .center2{
+                width: 80%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                .top{
+                    width: 100%;
+                    height: 50%;
+                    .adress{
+                        width: 100%;
+                        display: flex;
+                        margin-top: 2vh;
+                        i{
+                            font-size: clamp(18px, 2vw, 25px);
+                        }
+                        p{
+                            margin-left: 15px;
+                        }
+                    }
+                    .tel{
+                        width: 100%;
+                        display: flex;
+                        margin-top: 2vh;
+                        i{
+                            font-size: clamp(18px, 2vw, 25px);
+                        }
+                        p{
+                            margin-left: 15px;
+                        }
+                    }
+                }
+                .bottom{
+                    width: 100%;
+                    height: 50%;
+                    .nom{
+                        height: 6vh;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        input{
+                            padding-left: 5px;
+                            border-color: $mauve;
+                            width: 48%;
+                        }
+                    }
+                    textarea {
+                        width: 100%;
+                        resize: none;
+                        height: 12vh;
+                        border:2px solid $mauve;
+                        margin-top: 1vh;
+                        padding: 1vh;
+                    }
+                    button{
+                        width: 100%;
+                        height: 6vh;
+                        background-color: $mauve;
+                        border: none;
+                        color: white;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: transparent;
+                            color: black;
+                            border: 3px solid $mauve;
+                        }
+                    }
+                }
+            }
+        }
+        .rightside{
+            width: 50%;
+            height: 100%;
+            position: relative;
+            .center2{
+                width: 95%;
+                height: 95%;
+                @include centera;
+                iframe{
+                    z-index: 10000000;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

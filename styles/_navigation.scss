@@ -1,7 +1,7 @@
 header{
     width: 90%;
     height: 20vh;
-    position: fixed;
+    position: absolute;
     z-index: 50000;
     display: flex;
     justify-content: space-between;
@@ -28,6 +28,9 @@ header{
                     font-family: $font1;
                     font-size: clamp(15px, 1.3vw, 20px);
                     transition: .2s ease-out;
+                }
+                a.active{
+                    color: $jaune;
                 }
                 &:hover a{
                     color: #A49300;

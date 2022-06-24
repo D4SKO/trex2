@@ -1,0 +1,96 @@
+footer{
+    width: 100%;
+    height: 40vh;
+    margin-top: 5vh;
+    background-color: #D0D0D0;
+    display: flex;
+    position: relative;
+    z-index: 6000000;
+    .privacy{
+        width: 100%;
+        height: 2vh;
+        position: absolute;
+        bottom: 0;
+        background-color: #EBEBEB;
+        z-index: 5000;
+        .center3{
+            width: 85%;
+            height: 95%;
+            @include centera;
+            display: flex;
+            justify-content: space-between;
+            .copy{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                i{
+                    font-size: 0.8vw;
+                }
+                p{
+                    margin-left: 1vh;
+                    font-size: 0.8vw;
+                }
+            }
+            .terme{
+                width: 30%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p{
+                    font-size: 0.8vw;
+                }
+            }
+        }
+    }
+    .leftside{
+        width: 50%;
+        height: 100%;
+        @include centerf;
+        .center{
+            width: 70%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            p:nth-child(2){
+                width: 80%;
+                margin-top: 2vh;
+            }
+            .icone{
+                width: 30%;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 3vh;
+                a{
+                    width: 20%;
+                }
+            }
+        }
+    }
+    .rightside{
+        width: 50%;
+        height: 100%;
+        @include centerf;
+        justify-content: flex-start;
+        .center{
+            height: 50%;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            ul{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                li{
+                    font-family: $font2;
+                    font-size: clamp(14px, 0.9vw, 18px);
+                    line-height: 25px;
+                    color: black;
+                }
+            }
+        }
+    }
+}
