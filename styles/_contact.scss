@@ -114,3 +114,29 @@
         }
     }
 }
+@media screen and (max-width:900px) {
+    .contact{
+        .center{
+            width: 75%;
+            flex-direction: column;
+            justify-content: space-between;
+            .leftside{
+                width: 100%;
+                height: auto!important;
+            }
+            .rightside{
+                width: 100%;
+                height: 60%;
+                .center2{
+                    width: 100%;
+                    height: 80%;
+                    display: flex;
+                    align-items: flex-end;
+                    iframe{
+                        height: 75%;
+                    }
+                }
+            }
+        }
+    }
+}

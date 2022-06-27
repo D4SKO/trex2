@@ -19,7 +19,7 @@
         object-fit: cover;
         position: absolute;
         z-index: -1;
-        filter: brightness(0.8)
+        filter: brightness(0.6)
       }
       .center{
         @include centera;
@@ -104,4 +104,11 @@
         }
       }
     }
+}
+@media screen and (max-width:900px) {
+  .center{
+    .layer{
+      top: -100px!important;
+    }
+  }
 }

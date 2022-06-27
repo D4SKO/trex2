@@ -1,3 +1,10 @@
+/* -)----------------BURGER----------------- */
+
+$('.box').click(function(){
+  $('.box').toggleClass('active');
+  $('nav ul').toggleClass('active');
+})
+
 /* -------------scrollmagic -------------------- */
 var controller = new ScrollMagic.Controller();
 
@@ -51,4 +58,18 @@ var scene3 = new ScrollMagic.Scene({
     console.log("yo");
     $('.scene').addClass('arrive')
  })
+
+ /* --------------validetta-------------------------- */
+ var $form = $("form"),
+ $successMsg = $(".alert");
+$form.validetta({
+ bubblePosition: "bottom",
+ bubbleGapTop: 10,
+ bubbleGapLeft: -5,
+ onValid: function(e) {
+   e.preventDefault();
+   $successMsg.show();
+ }
+});
+  
 

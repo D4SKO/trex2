@@ -4,26 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page a propos">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="validetta/validetta.css" rel="stylesheet" type="text/css" media="screen" >
+    <link rel="stylesheet" href="./styles/validetta.min.css">
     <link rel="stylesheet" href="styles/index.css">
-    <title>Document</title>
+    <title>A propos</title>
 </head>
 <body>
   <div class="hoverpop"></div>
     <div class="apropos">
       <div class="popup_concours">
-        <i id="cross" class="fa-solid fa-circle-xmark"></i>
+        <i id="cross" class="fa-solid fa-xmark"></i>        
         <div class="lefts">
           <div class="center">
             <p class="petititre2">Remportez une place</p>
-            <form role="form" id="form">
-              <input type="text" placeholder="Votre nom" data-validetta="required">
-              <input type="text" placeholder="Votre prénom">
-              <input type="text" placeholder="Email">
-              <input type="text" placeholder="Confirmation email">
-              <button>ENVOYER</button>
-            </form>
+            <div class="panel-body">
+              <div class="alert alert-success">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Successfully submitted!</strong> The form is valid.
+              </div>
+              <form role="form">
+                <div class="form-group">
+                  <input type="text" placeholder="Nom" class="form-control" id="nom" name="nom" data-validetta="required,minLength[3]">
+                </div>
+                <div class="form-group">
+                  <input placeholder="Préom" type="text" class="form-control" id="prenom" name="prenom" data-validetta="required,minLength[3]">
+                </div>
+                <div class="form-group">
+                  <input placeholder="Email" type="email" class="form-control" id="email" name="email" data-validetta="required,email,equalTo[email2]">
+                </div>
+                <div class="form-group">
+                  <input placeholder="Confirmation email" type="email" class="form-control" id="email2" name="email2" data-validetta="required,email,equalTo[email]">
+                </div>
+                <button type="submit" class="btn btn-warning btn-default">Envoyer</button>
+              </form>
+            </div>
           </div>
         </div>
         <div class="rights">
@@ -33,6 +48,11 @@
         </div>
       </div>
         <header>
+          <button class="box">
+            <div class="ligne"></div>
+            <div class="ligne"></div>
+            <div class="ligne"></div>
+          </button>
           <div class="logo"></div>
           <nav>
             <ul>
@@ -54,14 +74,11 @@
           </div>
         </div>
         <div id="deux" class="deux">
-          <div class="scrolltotop"><i class="fa-solid fa-angle-up"></i></div>
           <div class="center">
             <div class="leftside">
               <div class="center2">
                 <p class="petititre2">Expo T-rex</p>
-                <p>Ensuite, apprenez à la connaître. Le parcours de l’expo vous propose six premiers interactifs pour comprendre le travail des paléontologues et découvrir l’époque à laquelle Trix a vécu, son âge lors de sa mort, son alimentation, l’origine de ses blessures et bien plus encore. Autant de questions auxquelles les scientifiques ont répondu en examinant ses os fossilisés et les roches dans lesquelles ils l’ont trouvée.
-
-                  Six autres interactifs vous permettent d’en apprendre plus sur la paléobiologie du T. rex en général : naissance, alimentation, déplacements…</p>
+                <p>Apprenez à la connaître. Le parcours de l’expo vous propose six premiers interactifs pour comprendre le travail des paléontologues et découvrir l’époque à laquelle Trix a vécu, son âge lors de sa mort, son alimentation, l’origine de ses blessures et bien plus encore. Autant de questions auxquelles les scientifiques ont répondu en examinant ses os fossilisés et les roches dans lesquelles ils l’ont trouvée. Six autres interactifs vous permettent d’en apprendre plus sur la paléobiologie du T. rex en général : naissance, alimentation, déplacements…</p>
               </div>
             </div>
             <div class="rightside">
@@ -139,11 +156,11 @@
             <p class="petititre">T-REX MUSEUM</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div class="icone">
-              <a href=""><i class="fa-brands fa-facebook"></i></a>
-              <a href=""><i class="fa-brands fa-instagram"></i></a>
-              <a href=""><i class="fa-brands fa-github"></i></a>
-              <a href=""><i class="fa-brands fa-snapchat"></i></a>
-              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.github.com/"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.snapchat.com/"><i class="fa-brands fa-snapchat"></i></a>
+              <a href="hhtps://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -166,18 +183,19 @@
             <nav>
               <ul>
                 <p class="petititre">Menu</p>
-                <li><a href="">HOME</a></li>
-                <li><a href="">TICKETS</a></li>
-                <li>STORE</li>
-                <li>CONTACT</li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a class="active" href="apropos.html">A PROPOS</a></li>
+                <li><a  href="CONTACT.HTML">CONTACT</a></li>
               </ul>
             </nav>
           </div>
         </div>
       </footer>
 
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-      <script type="text/javascript" src="validetta/validetta.js"></script>
+
+      <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+      <script src="./validetta/validetta.js"></script>
+      <script src="./validetta/localization/validettaLang-fr-FR.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>    
       <script src="main.js"></script>

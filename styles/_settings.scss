@@ -21,19 +21,19 @@ $mauvet:#2f306160;
 }
 p{
     font-family: $font2;
-    font-size: clamp(14px, 1.1vw, 20px);
+    font-size: clamp(17px, 1.1vw, 20px);
     line-height: 25px;
     color: #3D3D3D;
 }
 .petititre{
-    font-size: clamp(16px, 1.4vw, 20px);
-    font-weight: bold;
+    font-size: clamp(20px, 1.4vw, 20px);
+    font-weight: $mauve;
     color: #3D3D3D;
 }
 .petititre2{
-    font-size: clamp(16px, 2vw, 35px);
+    font-size: clamp(20px, 3vw, 35px);
     font-weight: bold;
-    color: $blue;
+    color: $mauve;
 }
 li{
     list-style-type: none;
@@ -51,10 +51,14 @@ a{
     color: black;
     font-family: $font2;
 }
+a.active{
+    color: $jaune;
+}
 body{
     width: 100vw;
     height: auto;
     position: relative;
+    overflow-x: hidden;
 }
 h1{
     font-size: clamp(20px, 4vw, 75px);
