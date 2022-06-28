@@ -71,5 +71,19 @@ $form.validetta({
    $successMsg.show();
  }
 });
+/* infoooo a propos */
+
+$('.acti1 .img').click(function(){
+  $('.acti .img').next().removeClass('active');
+  $('.acti1 .img').next().toggleClass('active');
+})
+$('.acti2 .img').click(function(){
+  $('.acti .img').next().removeClass('active');
+  $('.acti2 .img').next().toggleClass('active');
+})
+$('.acti3 .img').click(function(){
+  $('.acti .img').next().removeClass('active');
+  $('.acti3 .img').next().toggleClass('active');
+})
   
 

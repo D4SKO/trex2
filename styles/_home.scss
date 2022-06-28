@@ -106,9 +106,27 @@
     }
 }
 @media screen and (max-width:900px) {
+  header{
+    .logo img{
+      display: none;
+    }
+  }
   .center{
     .layer{
       top: -100px!important;
+    }
+  }
+  .second{
+    .center{
+      align-items: center;
+    }
+    .righ{
+      height: 80%!important;
+      width: 65%!important;
+      transform: translateX(20px);
+      p{
+        font-size: 2vw;
+      }
     }
   }
 }

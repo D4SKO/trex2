@@ -117,16 +117,17 @@
 @media screen and (max-width:900px) {
     .contact{
         .center{
-            width: 75%;
+            width:90%;
             flex-direction: column;
             justify-content: space-between;
+            transform: translate(-50%, -45%);
             .leftside{
                 width: 100%;
                 height: auto!important;
             }
             .rightside{
                 width: 100%;
-                height: 60%;
+                height: 50%;
                 .center2{
                     width: 100%;
                     height: 80%;

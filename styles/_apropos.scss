@@ -251,18 +251,6 @@
           transform: scale(0.9);
           opacity: 0;
           transition: .3s ease-out;
-          &:after{
-            position: absolute;
-            bottom: -25px;
-            width: 5%;
-            height: 3px;
-            left: 50%;
-            background-color: $mauve;
-            transform-origin: center;
-            transform: translateX(-50%) scale(0);
-            transition: .3s ease-out;
-            content: "";
-          }
         }
         .actis{
           width: 100%;
@@ -297,7 +285,7 @@
                 width: 100%;
                 height: 100%;
                 position: absolute;
-                background-color: $mauvet;
+                background-color: rgba(0, 0, 0, 0.5);
                 transition: .3s ease-out;
                 z-index: 50000;
               }
@@ -319,7 +307,7 @@
               &:hover{ 
                 .hover{
                 transform: scale(0.9, 0.6);
-                background-color: rgba(0, 0, 0, 0.4);
+                background-color: rgba(0, 0, 0, 0.2);
                 }
                 .petititre{
                   opacity: 1;
@@ -330,35 +318,43 @@
                 }
               }
             }
-            .petititre{
-              margin-top: 3vh;
-              transform: translateY(-15px);
-              opacity: 0;
-              transition: .3s ease-out;
-              color: $mauve;
-            }
-            .para{
-              margin-top: 3vh;
-              transform: translateY(-15px);
-              opacity: 0;
-              transition: .3s .3s ease-out;
-            }
-            button{
-              background-color: $mauve;
-              border: none;
-              padding: 15px 30px;
-              margin-top: 10vh;
-              cursor: pointer;
-              z-index: 500000;
-              color: white;
-              a{
-                color: white!important;
+            .info{
+              height: 30vh;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              margin-top: 2vh;
+              transform: translateY(-15%);
+              transition: .3s;
+              .petititre{
+                transition: .3s ease-out;
+                color: $blue;
               }
-              &:hover{
-                background-color: transparent;
-                border: 1px solid $mauve;
-                color: black;
+              .para{
+                transform: translateY(-15px);
+                transition: .3s .3s ease-out;
               }
+              button{
+                background-color: $blue;
+                border: none;
+                padding: 15px 30px;
+                cursor: pointer;
+                z-index: 500000;
+                color: white;
+                a{
+                  color: white!important;
+                }
+                &:hover{
+                  background-color: transparent;
+                  border: 1px solid $mauve;
+                  color: black;
+                }
+              }
+            }
+            .info.active{
+              position: relative!important;
+              opacity: 1!important;
+              transform: translate(0)!important;
             }
           }
         }
@@ -399,7 +395,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: #2f3061a8;
+        background-color: $mauvet;
         opacity: 0;
         transition: .3s ease-out;
       }
@@ -457,12 +453,23 @@
     }
 }
 @media screen and (max-width:900px) {
+  .first .center{
+    width: 90%!important;
+  }
   .deux{
     height: auto!important;
     .center{
-      flex-direction: column;
-      width: 90%;
-      height: auto!important;
+      flex-direction: column!important;
+      .rightside{
+        order: -1;
+        width: 100%!important;
+        .top{
+          height: 30vw!important;
+        }
+        .bottom{
+          margin-top: 1vh;
+        }
+      }
       .leftside{
         width: 100%!important;
         .center2{
@@ -470,15 +477,15 @@
           padding: 0!important;
         }
       }
-      .rightside{
-        width: 100%!important;
-        order: -1;
-      }
     }
   }
   .trois{
     height: auto!important;
     .center{
+      .petititre2{
+        text-align-last: left;
+        transform: scale(1)!important;
+      }
       p:first-child{
         margin-bottom: 5vh;
         opacity: 1!important;
@@ -488,6 +495,11 @@
         .acti{
           width: 100%!important;
           margin-bottom: 5vh;
+          .info{
+            height: 25vh;
+            position: absolute;
+            opacity: 0;
+          }
           button{
             margin-top: 5vh!important;
           }
@@ -497,5 +509,16 @@
   }
   .banner{
     height: 40vh!important;
+}
+.popup_concours{
+  #cross{
+    font-size: 5vw;
+  }
+  .lefts{
+    width: 100%!important;
+  }
+  .rights{
+    display: none!important;
+  }
 }
 }

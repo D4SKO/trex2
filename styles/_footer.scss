@@ -94,3 +94,42 @@ footer{
         }
     }
 }
+@media screen and (max-width:900px) {
+    footer{
+        flex-direction: column;
+        height: 70vh!important;
+        .privacy{
+            height: 5vh;
+            i{
+                font-size: 5vw!important;
+            }
+            .terme{
+                width: 40%!important;
+            }
+            p{
+                font-size: 2vw!important;
+                white-space: nowrap;
+            }
+        }
+        .leftside{
+            width: 100%!important;
+            margin-top: 5vh;
+            height: auto;
+            .center{
+                margin: auto!important;
+                width: 90%!important;
+                p{
+                    width: 100%!important;
+                }
+            }
+        }
+        .rightside{
+            width: 90%!important;
+            margin: auto;
+            margin-top: 1vh!important;
+            .center{
+                width: 100%!important;
+            }
+        }
+    }
+}

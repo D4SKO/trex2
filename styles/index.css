@@ -3,19 +3,17 @@ p {
   font-family: "Archivo", sans-serif;
   font-size: clamp(17px, 1.1vw, 20px);
   line-height: 25px;
-  color: #3D3D3D;
 }
 
-.petititre {
+p.petititre {
   font-size: clamp(20px, 1.4vw, 20px);
-  font-weight: #2F3061;
-  color: #3D3D3D;
+  font-weight: #539f92;
 }
 
-.petititre2 {
+p.petititre2 {
   font-size: clamp(20px, 3vw, 35px);
   font-weight: bold;
-  color: #2F3061;
+  color: #539f92;
 }
 
 li {
@@ -38,7 +36,7 @@ a {
 }
 
 a.active {
-  color: #A49300;
+  color: #ffdd4b;
 }
 
 body {
@@ -126,7 +124,7 @@ h1 {
 }
 
 .home .first .center button {
-  background-color: #2F3061;
+  background-color: #655b7d;
   border: none;
   padding: 15px 30px;
   margin-top: 10vh;
@@ -140,7 +138,7 @@ h1 {
 
 .home .first .center button:hover {
   background-color: transparent;
-  border: 1px solid #2F3061;
+  border: 1px solid #655b7d;
 }
 
 .home .scene.arrive .hoveranim1 {
@@ -225,8 +223,25 @@ h1 {
 }
 
 @media screen and (max-width: 900px) {
+  header .logo img {
+    display: none;
+  }
   .center .layer {
     top: -100px !important;
+  }
+  .second .center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .second .righ {
+    height: 80% !important;
+    width: 65% !important;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  .second .righ p {
+    font-size: 2vw;
   }
 }
 
@@ -323,7 +338,7 @@ h1 {
 }
 
 .apropos .popup_concours .lefts .center form input {
-  border: 2px solid #2F3061;
+  border: 2px solid #655b7d;
   margin: 1vh 0;
   height: 6vh;
   padding-left: 5px;
@@ -333,7 +348,7 @@ h1 {
 .apropos .popup_concours .lefts .center form button {
   width: 100%;
   height: 6vh;
-  background-color: #2F3061;
+  background-color: #655b7d;
   border: none;
   color: white;
   cursor: pointer;
@@ -342,7 +357,7 @@ h1 {
 .apropos .popup_concours .lefts .center form button:hover {
   background-color: transparent;
   color: black;
-  border: 3px solid #2F3061;
+  border: 3px solid #655b7d;
 }
 
 .apropos .popup_concours .rights {
@@ -631,22 +646,6 @@ h1 {
   transition: .3s ease-out;
 }
 
-.apropos .trois .center p:first-child:after {
-  position: absolute;
-  bottom: -25px;
-  width: 5%;
-  height: 3px;
-  left: 50%;
-  background-color: #2F3061;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform: translateX(-50%) scale(0);
-          transform: translateX(-50%) scale(0);
-  -webkit-transition: .3s ease-out;
-  transition: .3s ease-out;
-  content: "";
-}
-
 .apropos .trois .center .actis {
   width: 100%;
   height: 90%;
@@ -706,7 +705,7 @@ h1 {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: #2f306160;
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
   z-index: 50000;
@@ -739,7 +738,7 @@ h1 {
 .apropos .trois .center .actis .acti .img:hover .hover {
   -webkit-transform: scale(0.9, 0.6);
           transform: scale(0.9, 0.6);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .apropos .trois .center .actis .acti .img:hover .petititre {
@@ -753,43 +752,62 @@ h1 {
           transform: scale(1.2);
 }
 
-.apropos .trois .center .actis .acti .petititre {
-  margin-top: 3vh;
-  -webkit-transform: translateY(-15px);
-          transform: translateY(-15px);
-  opacity: 0;
-  -webkit-transition: .3s ease-out;
-  transition: .3s ease-out;
-  color: #2F3061;
+.apropos .trois .center .actis .acti .info {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2vh;
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
-.apropos .trois .center .actis .acti .para {
-  margin-top: 3vh;
+.apropos .trois .center .actis .acti .info .petititre {
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+  color: #539f92;
+}
+
+.apropos .trois .center .actis .acti .info .para {
   -webkit-transform: translateY(-15px);
           transform: translateY(-15px);
-  opacity: 0;
   -webkit-transition: .3s .3s ease-out;
   transition: .3s .3s ease-out;
 }
 
-.apropos .trois .center .actis .acti button {
-  background-color: #2F3061;
+.apropos .trois .center .actis .acti .info button {
+  background-color: #539f92;
   border: none;
   padding: 15px 30px;
-  margin-top: 10vh;
   cursor: pointer;
   z-index: 500000;
   color: white;
 }
 
-.apropos .trois .center .actis .acti button a {
+.apropos .trois .center .actis .acti .info button a {
   color: white !important;
 }
 
-.apropos .trois .center .actis .acti button:hover {
+.apropos .trois .center .actis .acti .info button:hover {
   background-color: transparent;
-  border: 1px solid #2F3061;
+  border: 1px solid #655b7d;
   color: black;
+}
+
+.apropos .trois .center .actis .acti .info.active {
+  position: relative !important;
+  opacity: 1 !important;
+  -webkit-transform: translate(0) !important;
+          transform: translate(0) !important;
 }
 
 .apropos .trois.arrive .center p {
@@ -837,7 +855,7 @@ h1 {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #2f3061a8;
+  background-color: #655b7d5e;
   opacity: 0;
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
@@ -886,7 +904,7 @@ h1 {
 
 .apropos .banner .center button:hover {
   background-color: rgba(0, 0, 0, 0.6);
-  border-color: #A49300;
+  border-color: #ffdd4b;
 }
 
 .apropos .banner.arrive .hover {
@@ -911,16 +929,29 @@ h1 {
 }
 
 @media screen and (max-width: 900px) {
+  .first .center {
+    width: 90% !important;
+  }
   .deux {
     height: auto !important;
   }
   .deux .center {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 90%;
-    height: auto !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .deux .center .rightside {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    width: 100% !important;
+  }
+  .deux .center .rightside .top {
+    height: 30vw !important;
+  }
+  .deux .center .rightside .bottom {
+    margin-top: 1vh;
   }
   .deux .center .leftside {
     width: 100% !important;
@@ -929,14 +960,13 @@ h1 {
     width: 100% !important;
     padding: 0 !important;
   }
-  .deux .center .rightside {
-    width: 100% !important;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-  }
   .trois {
     height: auto !important;
+  }
+  .trois .center .petititre2 {
+    text-align-last: left;
+    -webkit-transform: scale(1) !important;
+            transform: scale(1) !important;
   }
   .trois .center p:first-child {
     margin-bottom: 5vh;
@@ -952,11 +982,25 @@ h1 {
     width: 100% !important;
     margin-bottom: 5vh;
   }
+  .trois .center .actis .acti .info {
+    height: 25vh;
+    position: absolute;
+    opacity: 0;
+  }
   .trois .center .actis .acti button {
     margin-top: 5vh !important;
   }
   .banner {
     height: 40vh !important;
+  }
+  .popup_concours #cross {
+    font-size: 5vw;
+  }
+  .popup_concours .lefts {
+    width: 100% !important;
+  }
+  .popup_concours .rights {
+    display: none !important;
   }
 }
 
@@ -1081,7 +1125,7 @@ h1 {
 
 .contact .center .leftside .center2 .bottom .nom input {
   padding-left: 5px;
-  border-color: #2F3061;
+  border-color: #655b7d;
   width: 48%;
 }
 
@@ -1089,7 +1133,7 @@ h1 {
   width: 100%;
   resize: none;
   height: 12vh;
-  border: 2px solid #2F3061;
+  border: 2px solid #655b7d;
   margin-top: 1vh;
   padding: 1vh;
 }
@@ -1097,7 +1141,7 @@ h1 {
 .contact .center .leftside .center2 .bottom button {
   width: 100%;
   height: 6vh;
-  background-color: #2F3061;
+  background-color: #655b7d;
   border: none;
   color: white;
   cursor: pointer;
@@ -1106,7 +1150,7 @@ h1 {
 .contact .center .leftside .center2 .bottom button:hover {
   background-color: transparent;
   color: black;
-  border: 3px solid #2F3061;
+  border: 3px solid #655b7d;
 }
 
 .contact .center .rightside {
@@ -1133,7 +1177,7 @@ h1 {
 
 @media screen and (max-width: 900px) {
   .contact .center {
-    width: 75%;
+    width: 90%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1141,6 +1185,8 @@ h1 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-transform: translate(-50%, -45%);
+            transform: translate(-50%, -45%);
   }
   .contact .center .leftside {
     width: 100%;
@@ -1148,7 +1194,7 @@ h1 {
   }
   .contact .center .rightside {
     width: 100%;
-    height: 60%;
+    height: 50%;
   }
   .contact .center .rightside .center2 {
     width: 100%;
@@ -1166,7 +1212,7 @@ h1 {
 }
 
 header {
-  width: 90%;
+  width: 95%;
   height: 20vh;
   position: absolute;
   z-index: 50000;
@@ -1184,9 +1230,20 @@ header {
           transform: translateX(-50%);
 }
 
+header .box {
+  display: none;
+}
+
 header .logo {
   width: 15%;
   height: 60%;
+}
+
+header .logo img {
+  width: 80%;
+  height: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 header nav {
@@ -1223,7 +1280,7 @@ header nav ul li a {
 }
 
 header nav ul li a.active {
-  color: #A49300;
+  color: #ffdd4b;
 }
 
 header nav ul li:hover a {
@@ -1240,7 +1297,7 @@ header nav ul li:after {
   width: 120%;
   height: 2px;
   position: absolute;
-  background-color: #A49300;
+  background-color: #ffdd4b;
   left: 50%;
   -webkit-transform: translate(-50%) scaleX(0);
           transform: translate(-50%) scaleX(0);
@@ -1254,14 +1311,19 @@ header nav ul li:after {
 @media screen and (max-width: 900px) {
   header {
     width: 100%;
-    height: auto;
+    height: 10vh;
   }
   header .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     position: absolute;
     width: 45px;
     height: 20px;
     right: 25px;
-    top: 25px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -1321,30 +1383,34 @@ header nav ul li:after {
     transition: top .4s  ease-in-out, transform .4s 0.4s ease-in-out, -webkit-transform .4s 0.4s ease-in-out;
   }
   header nav {
-    height: 45vh !important;
-    width: 50%;
+    width: 30% !important;
   }
   header nav ul {
-    width: 100%;
-    height: 100%;
+    height: 30vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: #2F3061;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 40px 30px;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: .5s ease-out;
-    transition: .5s ease-out;
-    padding-top: 65px;
+    padding-top: 20vh;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-right: 2vh;
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
+    opacity: 0;
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+    pointer-events: none;
+  }
+  header nav ul li {
+    white-space: nowrap;
   }
   header nav ul.active {
     -webkit-transform: translate(0);
             transform: translate(0);
+    opacity: 1;
+    pointer-events: all;
   }
 }
 
@@ -1519,5 +1585,48 @@ footer .rightside .center ul li {
   font-size: clamp(14px, 0.9vw, 18px);
   line-height: 25px;
   color: black;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 70vh !important;
+  }
+  footer .privacy {
+    height: 5vh;
+  }
+  footer .privacy i {
+    font-size: 5vw !important;
+  }
+  footer .privacy .terme {
+    width: 40% !important;
+  }
+  footer .privacy p {
+    font-size: 2vw !important;
+    white-space: nowrap;
+  }
+  footer .leftside {
+    width: 100% !important;
+    margin-top: 5vh;
+    height: auto;
+  }
+  footer .leftside .center {
+    margin: auto !important;
+    width: 90% !important;
+  }
+  footer .leftside .center p {
+    width: 100% !important;
+  }
+  footer .rightside {
+    width: 90% !important;
+    margin: auto;
+    margin-top: 1vh !important;
+  }
+  footer .rightside .center {
+    width: 100% !important;
+  }
 }
 /*# sourceMappingURL=index.css.map */
